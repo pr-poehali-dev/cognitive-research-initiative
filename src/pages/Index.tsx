@@ -3,7 +3,6 @@ import { TextGradientScroll } from "@/components/ui/text-gradient-scroll"
 import { Timeline } from "@/components/ui/timeline"
 import GallerySection from "@/components/GallerySection"
 import ReviewsSection from "@/components/ReviewsSection"
-import ContactsSection from "@/components/ContactsSection"
 
 export default function Index() {
   const missionStatement =
@@ -43,9 +42,6 @@ export default function Index() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <HeroSection />
-
-      {/* Contacts Section */}
-      <ContactsSection />
 
       {/* Mission Statement Section */}
       <section id="mission" className="relative min-h-screen flex items-center justify-center py-20 bg-white">
