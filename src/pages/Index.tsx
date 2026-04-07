@@ -44,6 +44,9 @@ export default function Index() {
       {/* Hero Section */}
       <HeroSection />
 
+      {/* Contacts Section */}
+      <ContactsSection />
+
       {/* Mission Statement Section */}
       <section id="mission" className="relative min-h-screen flex items-center justify-center py-20 bg-white">
         <div className="absolute inset-0 bg-grid-subtle opacity-30 pointer-events-none" />
@@ -84,9 +87,6 @@ export default function Index() {
 
       {/* Testimonials Section */}
       <ReviewsSection />
-
-      {/* Contacts Section */}
-      <ContactsSection />
     </div>
   )
 }
