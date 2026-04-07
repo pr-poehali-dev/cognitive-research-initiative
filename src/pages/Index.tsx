@@ -1,7 +1,6 @@
 import HeroSection from "@/components/HeroSection"
 import { TextGradientScroll } from "@/components/ui/text-gradient-scroll"
 import { Timeline } from "@/components/ui/timeline"
-import SmoothScrollHero from "@/components/ui/smooth-scroll-hero"
 import GallerySection from "@/components/GallerySection"
 import ReviewsSection from "@/components/ReviewsSection"
 
@@ -85,16 +84,7 @@ export default function Index() {
       {/* Testimonials Section */}
       <ReviewsSection />
 
-      {/* Final CTA Section */}
-      <section id="join" className="relative">
-        <SmoothScrollHero
-          scrollHeight={2500}
-          desktopImage="https://cdn.poehali.dev/projects/46dd4494-3289-46e0-b512-2259236e3c49/files/f0b5a93d-8324-4621-b43b-411cff248d31.jpg"
-          mobileImage="https://cdn.poehali.dev/projects/46dd4494-3289-46e0-b512-2259236e3c49/files/f0b5a93d-8324-4621-b43b-411cff248d31.jpg"
-          initialClipPercentage={30}
-          finalClipPercentage={70}
-        />
-      </section>
+
     </div>
   )
 }

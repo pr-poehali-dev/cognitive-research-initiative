@@ -27,7 +27,6 @@ export default function HeroSection() {
     { name: "Маршруты", href: "#community" },
     { name: "Галерея", href: "#gallery" },
     { name: "Отзывы", href: "#testimonials" },
-    { name: "Забронировать", href: "#join" },
   ]
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length)
@@ -115,9 +114,9 @@ export default function HeroSection() {
           <LiquidButton
             size="xxl"
             className="font-semibold text-lg tracking-wide"
-            onClick={() => scrollToSection("#join")}
+            onClick={() => scrollToSection("#community")}
           >
-            Забронировать тур
+            Смотреть маршруты
           </LiquidButton>
         </div>
       </div>
