@@ -111,13 +111,24 @@ export default function HeroSection() {
             Джип-туры и экскурсии с личным гидом
           </p>
 
-          <LiquidButton
-            size="xxl"
-            className="font-semibold text-lg tracking-wide"
-            onClick={() => scrollToSection("#community")}
-          >
-            Смотреть маршруты
-          </LiquidButton>
+          <div className="flex flex-wrap justify-center gap-4 mb-0">
+            <LiquidButton
+              size="xxl"
+              className="font-semibold text-lg tracking-wide"
+              onClick={() => scrollToSection("#community")}
+            >
+              Смотреть маршруты
+            </LiquidButton>
+
+            <button
+              onClick={() => scrollToSection("#testimonials")}
+              className="flex items-center gap-2 px-8 py-4 bg-amber-400 hover:bg-amber-300 text-gray-900 font-black text-lg tracking-wide transition-all duration-300 hover:scale-105"
+              style={{ clipPath: "polygon(14px 0%, 100% 0%, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0% 100%, 0% 14px)" }}
+            >
+              <Icon name="PenLine" size={20} />
+              Оставить отзыв
+            </button>
+          </div>
 
           <div className="flex flex-wrap justify-center gap-3 mt-8">
             <a
