@@ -5,8 +5,8 @@ import Icon from "@/components/ui/icon";
 const guides = [
   {
     id: 1,
-    name: "Алексей Горский",
-    role: "Старший гид • 12 лет в горах",
+    name: "Алексей",
+    role: "Старший гид",
     photo:
       "https://cdn.poehali.dev/projects/46dd4494-3289-46e0-b512-2259236e3c49/files/e7746093-e559-408b-86cb-42936de8cfde.jpg",
     greeting:
@@ -16,8 +16,8 @@ const guides = [
   },
   {
     id: 2,
-    name: "Тимур Чегемов",
-    role: "Гид-экстремал • 7 лет опыта",
+    name: "Владимир",
+    role: "Старший гид",
     photo:
       "https://cdn.poehali.dev/projects/46dd4494-3289-46e0-b512-2259236e3c49/files/f6ed1ba2-9902-47f1-8cb7-3128b805c638.jpg",
     greeting:
@@ -27,8 +27,8 @@ const guides = [
   },
   {
     id: 3,
-    name: "Марьяна Эльбрусова",
-    role: "Гид-историк • 5 лет опыта",
+    name: "Фарух",
+    role: "Старший гид",
     photo:
       "https://cdn.poehali.dev/projects/46dd4494-3289-46e0-b512-2259236e3c49/files/5efb3011-eed9-4905-8640-d50dc951c6cf.jpg",
     greeting:
@@ -38,8 +38,8 @@ const guides = [
   },
   {
     id: 4,
-    name: "Руслан Казбеков",
-    role: "Семейный гид • 9 лет опыта",
+    name: "Игорь",
+    role: "Старший гид",
     photo:
       "https://cdn.poehali.dev/projects/46dd4494-3289-46e0-b512-2259236e3c49/files/1b5ed8ac-1ed9-4b68-bc2a-339474138ec6.jpg",
     greeting:
