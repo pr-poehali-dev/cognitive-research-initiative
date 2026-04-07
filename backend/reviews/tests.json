@@ -1,0 +1,17 @@
+{
+  "tests": [
+    {
+      "name": "GET reviews",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "POST review",
+      "method": "POST",
+      "path": "/",
+      "body": { "name": "Тест", "city": "Москва", "text": "Отличный тур!", "rating": 5 },
+      "expectedStatus": 201
+    }
+  ]
+}
