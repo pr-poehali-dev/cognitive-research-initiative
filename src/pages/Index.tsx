@@ -3,6 +3,7 @@ import { TextGradientScroll } from "@/components/ui/text-gradient-scroll"
 import { Timeline } from "@/components/ui/timeline"
 import GallerySection from "@/components/GallerySection"
 import ReviewsSection from "@/components/ReviewsSection"
+import ContactsSection from "@/components/ContactsSection"
 
 export default function Index() {
   const missionStatement =
@@ -84,7 +85,8 @@ export default function Index() {
       {/* Testimonials Section */}
       <ReviewsSection />
 
-
+      {/* Contacts Section */}
+      <ContactsSection />
     </div>
   )
 }

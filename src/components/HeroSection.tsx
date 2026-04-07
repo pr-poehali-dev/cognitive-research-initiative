@@ -27,6 +27,7 @@ export default function HeroSection() {
     { name: "Маршруты", href: "#community" },
     { name: "Галерея", href: "#gallery" },
     { name: "Отзывы", href: "#testimonials" },
+    { name: "Контакты", href: "#contacts" },
   ]
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length)
