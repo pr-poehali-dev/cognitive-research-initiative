@@ -120,7 +120,42 @@ export default function HeroSection() {
             Смотреть маршруты
           </LiquidButton>
 
-
+          <div className="flex flex-wrap justify-center gap-3 mt-8">
+            <a
+              href="tel:+79054413485"
+              className="flex items-center gap-2 px-5 py-2.5 bg-white/10 hover:bg-white/25 backdrop-blur-sm border border-white/30 text-white font-medium transition-all duration-300"
+            >
+              <Icon name="Phone" size={16} />
+              <span className="text-sm">+7 905 441 34 85</span>
+            </a>
+            <a
+              href="https://wa.me/79054413485"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-2.5 bg-green-500/80 hover:bg-green-500 backdrop-blur-sm border border-green-400/50 text-white font-medium transition-all duration-300"
+            >
+              <Icon name="MessageCircle" size={16} />
+              <span className="text-sm">WhatsApp</span>
+            </a>
+            <a
+              href="https://t.me/Igor_Dorsh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-2.5 bg-sky-500/80 hover:bg-sky-500 backdrop-blur-sm border border-sky-400/50 text-white font-medium transition-all duration-300"
+            >
+              <Icon name="Send" size={16} />
+              <span className="text-sm">Telegram</span>
+            </a>
+            <a
+              href="https://instagram.com/doroshenko_is"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-2.5 bg-pink-600/80 hover:bg-pink-600 backdrop-blur-sm border border-pink-400/50 text-white font-medium transition-all duration-300"
+            >
+              <Icon name="Instagram" size={16} />
+              <span className="text-sm">@doroshenko_is</span>
+            </a>
+          </div>
         </div>
       </div>
 
