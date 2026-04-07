@@ -7,34 +7,34 @@ import SmoothScrollHero from "@/components/ui/smooth-scroll-hero"
 
 export default function Index() {
   const missionStatement =
-    "В Stride Collective мы верим: движение — это не просто выбор, это образ жизни. Рожденные из духа бегового сообщества, мы объединяем бегунов со всего мира, которых связывает страсть к преодолению границ. Бежишь ли ты навстречу рассвету по городским улицам или покоряешь горные тропы — мы здесь, чтобы вдохновлять тебя. Наше сообщество живет ритмом шагов, силой упорства и радостью общих побед. Присоединяйся к нам — беги не только ради формы, но ради свободы, дружбы и чистой любви к движению."
+    "Кавказские горы — это живая легенда. Я проведу вас туда, где нет туристических толп: к древним башням и ледникам, вдоль ущелий с бирюзовыми реками и над облаками на вершинах, куда не доберётся обычный автобус. Комфортный джип, личный гид, маршруты на любой вкус — от лёгких прогулок до настоящих экспедиций. Каждая поездка — это история, которую вы будете рассказывать всю жизнь."
 
   const timelineEntries = [
     {
       id: 1,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-RJ3iTXUn5SUexF6nHMZYhMoQLNCboK.png",
-      alt: "Бегунья в художественном размытии движения",
-      title: "Каждый шаг важен",
+      image: "https://cdn.poehali.dev/projects/46dd4494-3289-46e0-b512-2259236e3c49/files/5639da56-bc04-4413-811c-63fb1e1564fe.jpg",
+      alt: "Горное ущелье Кавказа",
+      title: "Индивидуальные туры",
       description:
-        "От первой пробежки вокруг дома до сотого марафона — у каждого бегуна своя история. В Stride Collective мы чествуем новичков, которые впервые шнуруют кроссовки. Твой темп не важен — важна твоя страсть. Чего ты ждешь?",
+        "Маршрут полностью под вас: удобный темп, интересные вам локации, остановки там, где захочется. Идеально для пар, семей с детьми или тех, кто хочет сойти с проторённой тропы и открыть Кавказ по-настоящему. Поедем туда, куда не возят группы.",
       layout: "left" as const,
     },
     {
       id: 2,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-LN9OPh9hw0b9rwSPRSslHoejcfoKHe.png",
-      alt: "Бегун с решимостью и концентрацией",
-      title: "Найди свой ритм",
+      image: "https://cdn.poehali.dev/projects/46dd4494-3289-46e0-b512-2259236e3c49/files/c67e9125-4c16-4d4b-b9d5-85953a51fa44.jpg",
+      alt: "Группа туристов в джипе",
+      title: "Групповые экскурсии",
       description:
-        "Гонишься за личными рекордами или просто встречаешь рассвет на бегу — наше сообщество принимает каждого. От спринтеров до любителей медленного бега, от трейлраннеров до звезд стадиона — здесь найдется место для тебя. Вопрос один: чего ты ждешь?",
+        "Небольшие группы до 6 человек — атмосфера дружеского путешествия, а не шумного автобуса. Мы объединяем людей, которые хотят увидеть настоящий Кавказ: перевалы, водопады, нарзанные источники и горные сёла с живой историей.",
       layout: "right" as const,
     },
     {
       id: 3,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1FdGyjVpWQANGzsDWpoPIvF5SVI2za.png",
-      alt: "Бегун в динамике, демонстрирующий силу и грацию",
-      title: "Стань частью движения",
+      image: "https://cdn.poehali.dev/projects/46dd4494-3289-46e0-b512-2259236e3c49/files/21c6628c-3c86-4e82-9699-cc5be0900a8a.jpg",
+      alt: "Джип на горной дороге",
+      title: "Экстремальные маршруты",
       description:
-        "Бег — это не только километры, это моменты. Утренние разговоры, общие трудности, коллективные победы. В Stride Collective ты вступаешь не просто в группу — ты становишься частью семьи. Зашнуруй кроссовки, выйди на старт и открой, на что ты способен. Серьезно, чего ты ждешь?",
+        "Для тех, кто хочет большего — подъём к ледникам, переправы через горные реки, ночёвки под звёздами на высоте 3000 метров. Современные полноприводные автомобили и опыт гида гарантируют безопасность даже там, где нет дорог.",
       layout: "left" as const,
     },
   ]
@@ -44,14 +44,13 @@ export default function Index() {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Mission Statement Section with Grid Background */}
+      {/* Mission Statement Section */}
       <section id="mission" className="relative min-h-screen flex items-center justify-center py-20 bg-white">
-        {/* Subtle Grid Pattern */}
         <div className="absolute inset-0 bg-grid-subtle opacity-30 pointer-events-none" />
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-6xl font-black tracking-wider mb-12 text-gray-900">НАША МИССИЯ</h2>
+            <h2 className="text-4xl md:text-6xl font-black tracking-wider mb-12 text-gray-900">МОЯ МИССИЯ</h2>
             <TextGradientScroll
               text={missionStatement}
               className="text-2xl md:text-3xl lg:text-4xl font-medium leading-relaxed text-gray-800"
@@ -62,17 +61,16 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Timeline Section */}
+      {/* Routes / Timeline Section */}
       <section id="community" className="relative py-20 bg-white">
-        {/* Subtle Grid Pattern */}
         <div className="absolute inset-0 bg-grid-subtle opacity-30 pointer-events-none" />
 
         <div className="relative z-10">
           <div className="container mx-auto px-6 mb-16">
             <div className="text-center">
-              <h2 className="text-4xl md:text-6xl font-black tracking-wider mb-6 text-gray-900">МЫ РАДЫ КАЖДОМУ</h2>
+              <h2 className="text-4xl md:text-6xl font-black tracking-wider mb-6 text-gray-900">НАШИ МАРШРУТЫ</h2>
               <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-                У каждого бегуна свой путь. Вот лишь несколько историй из нашего открытого сообщества.
+                Каждый тур — это особый опыт. Выберите формат, который подходит именно вам.
               </p>
             </div>
           </div>
@@ -83,7 +81,6 @@ export default function Index() {
 
       {/* Testimonials Section */}
       <section id="testimonials" className="relative py-20 bg-white">
-        {/* Subtle Grid Pattern */}
         <div className="absolute inset-0 bg-grid-subtle opacity-30 pointer-events-none" />
 
         <div className="container mx-auto px-6 relative z-10">
@@ -96,10 +93,10 @@ export default function Index() {
           >
             <h2 className="text-4xl md:text-6xl font-black tracking-wider text-gray-900 mb-6">
               Что говорят наши{" "}
-              <span className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">БЕГУНЫ</span>
+              <span className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">ГОСТИ</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
-              Реальные истории от реальных бегунов, которые нашли свой ритм вместе со Stride Collective.
+              Реальные впечатления людей, которые уже побывали в наших горных турах.
             </p>
           </motion.div>
 
@@ -107,12 +104,12 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Smooth Scroll Hero with CTA Overlay */}
+      {/* Final CTA Section */}
       <section id="join" className="relative">
         <SmoothScrollHero
           scrollHeight={2500}
-          desktopImage="/images/runners-motion-blur.png"
-          mobileImage="/images/runners-motion-blur.png"
+          desktopImage="https://cdn.poehali.dev/projects/46dd4494-3289-46e0-b512-2259236e3c49/files/f0b5a93d-8324-4621-b43b-411cff248d31.jpg"
+          mobileImage="https://cdn.poehali.dev/projects/46dd4494-3289-46e0-b512-2259236e3c49/files/f0b5a93d-8324-4621-b43b-411cff248d31.jpg"
           initialClipPercentage={30}
           finalClipPercentage={70}
         />

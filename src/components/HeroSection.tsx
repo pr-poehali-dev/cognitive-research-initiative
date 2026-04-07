@@ -1,5 +1,5 @@
 import { LiquidButton } from "@/components/ui/liquid-glass-button"
-import { Menu, ChevronLeft, ChevronRight, X } from "lucide-react"
+import Icon from "@/components/ui/icon"
 import { useState } from "react"
 
 export default function HeroSection() {
@@ -8,28 +8,27 @@ export default function HeroSection() {
 
   const slides = [
     {
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j46TPXDHzpn3M65wMva3qHPNhwokYn.png",
-      alt: "Группа бегунов в движении",
+      image: "https://cdn.poehali.dev/projects/46dd4494-3289-46e0-b512-2259236e3c49/files/21c6628c-3c86-4e82-9699-cc5be0900a8a.jpg",
+      alt: "Джип на горной дороге Кавказа",
     },
     {
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-oH2K0gw1HEqvYhhbwJrYbmkBrbksyk.png",
-      alt: "Бегунья с эффектом размытия",
+      image: "https://cdn.poehali.dev/projects/46dd4494-3289-46e0-b512-2259236e3c49/files/f0b5a93d-8324-4621-b43b-411cff248d31.jpg",
+      alt: "Панорама горных вершин Кавказа",
     },
     {
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-DQ2brNc5Vszxllx17YNA6JqGqiHaRm.png",
-      alt: "Бегун во главе группы",
+      image: "https://cdn.poehali.dev/projects/46dd4494-3289-46e0-b512-2259236e3c49/files/c67e9125-4c16-4d4b-b9d5-85953a51fa44.jpg",
+      alt: "Группа туристов в джипе на горном маршруте",
     },
   ]
 
   const navItems = [
     { name: "Главная", href: "#hero" },
-    { name: "Миссия", href: "#mission" },
-    { name: "Сообщество", href: "#community" },
+    { name: "О нас", href: "#mission" },
+    { name: "Маршруты", href: "#community" },
     { name: "Отзывы", href: "#testimonials" },
-    { name: "Вступить", href: "#join" },
+    { name: "Забронировать", href: "#join" },
   ]
 
-  // Navigation handlers
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length)
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
 
@@ -50,16 +49,13 @@ export default function HeroSection() {
           backgroundImage: `url('${slides[currentSlide].image}')`,
         }}
       >
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
       {/* Navigation */}
       <nav className="relative z-20 flex items-center justify-between p-6 md:p-8">
-        {/* Logo/Brand */}
-        <div className="text-white font-bold text-xl tracking-wider">STRIDE</div>
+        <div className="text-white font-bold text-xl tracking-wider">КАВКАЗ ТРЕВЕЛ</div>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (
             <button
@@ -73,12 +69,11 @@ export default function HeroSection() {
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden text-white hover:text-gray-300 transition-colors"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMenuOpen ? <Icon name="X" size={24} /> : <Icon name="Menu" size={24} />}
           <span className="sr-only">Меню</span>
         </button>
       </nav>
@@ -103,23 +98,25 @@ export default function HeroSection() {
       {/* Hero Content */}
       <div className="relative z-10 flex h-full items-center justify-center px-6">
         <div className="text-center text-white max-w-4xl">
-          {/* Main Title */}
+          <p className="text-sm md:text-base font-medium tracking-widest mb-4 text-amber-300 uppercase">
+            Профессиональный гид • Комфортные джипы
+          </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-wider mb-4 leading-none">
-            STRIDE
+            ГОРЫ
             <br />
-            COLLECTIVE
+            КАВКАЗА
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl font-light tracking-wide mb-8 text-gray-200">Беговое сообщество</p>
+          <p className="text-xl md:text-2xl font-light tracking-wide mb-8 text-gray-200">
+            Джип-туры и экскурсии с личным гидом
+          </p>
 
-          {/* CTA Button - Now using LiquidButton */}
           <LiquidButton
             size="xxl"
             className="font-semibold text-lg tracking-wide"
             onClick={() => scrollToSection("#join")}
           >
-            Присоединиться
+            Забронировать тур
           </LiquidButton>
         </div>
       </div>
@@ -127,16 +124,14 @@ export default function HeroSection() {
       {/* Slider Navigation */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
         <div className="flex items-center space-x-4">
-          {/* Previous Arrow */}
           <button
             onClick={prevSlide}
             className="text-white hover:text-gray-300 transition-colors p-2"
             aria-label="Предыдущий слайд"
           >
-            <ChevronLeft size={24} />
+            <Icon name="ChevronLeft" size={24} />
           </button>
 
-          {/* Slide Indicators */}
           <div className="flex space-x-2">
             {slides.map((_, index) => (
               <button
@@ -150,13 +145,12 @@ export default function HeroSection() {
             ))}
           </div>
 
-          {/* Next Arrow */}
           <button
             onClick={nextSlide}
             className="text-white hover:text-gray-300 transition-colors p-2"
             aria-label="Следующий слайд"
           >
-            <ChevronRight size={24} />
+            <Icon name="ChevronRight" size={24} />
           </button>
         </div>
       </div>

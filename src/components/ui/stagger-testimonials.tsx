@@ -5,147 +5,147 @@ import { cn } from "@/lib/utils"
 
 const SQRT_5000 = Math.sqrt(5000)
 
-// Running club testimonials data with randomly generated icons
+// Testimonials from jeep tour guests
 const testimonials = [
   {
     tempId: 0,
     testimonial:
-      "Stride Collective изменил мою жизнь. От попыток пробежать 5 минут до первого марафона — это сообщество верило в меня, когда я сам в себя не верил.",
-    by: "Сергей Иванов, марафонец",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=SergeyIvanov&backgroundColor=3b82f6&textColor=ffffff",
+      "Никогда не думал, что горы могут так впечатлить. Гид знает каждый камень — останавливались в местах, о которых нет ни в одном путеводителе. Это было лучшее путешествие в моей жизни.",
+    by: "Александр Петров, Москва",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AlexPetrov&backgroundColor=3b82f6&textColor=ffffff",
   },
   {
     tempId: 1,
     testimonial:
-      "Я боялась присоединиться к беговой группе, но Stride Collective встретил меня с распростертыми объятиями. Теперь у меня друзья на всю жизнь и уверенность достигать любых целей.",
-    by: "Марина Петрова, трейлраннер",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=MarinaPetrova&backgroundColor=10b981&textColor=ffffff",
+      "Ехали семьёй с двумя детьми — всё было продумано до мелочей. Дети в восторге от горных рек и водопадов. Гид находил общий язык со всеми, включая нашего 7-летнего сына.",
+    by: "Марина Соколова, Санкт-Петербург",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=MarinaSokolova&backgroundColor=10b981&textColor=ffffff",
   },
   {
     tempId: 2,
     testimonial:
-      "Энергетика на пробежках Stride Collective заразительна. Быстрый ты или медленный — все болеют за тебя. Здесь не соревнование, здесь сообщество.",
-    by: "Анна Козлова, любитель 5К",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AnnaKozlova&backgroundColor=8b5cf6&textColor=ffffff",
+      "Заказывал индивидуальный тур — полная свобода маршрута. Остановились в трёх сёлах, попробовали настоящую горскую кухню. Джип провёз нас туда, где обычные машины не пройдут.",
+    by: "Дмитрий Новиков, Екатеринбург",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=DmitriyNovikov&backgroundColor=8b5cf6&textColor=ffffff",
   },
   {
     tempId: 3,
     testimonial:
-      "После лет одиночных пробежек Stride Collective стал для меня открытием. Групповые тренировки помогли выйти на личные рекорды, о которых я и мечтать не мог.",
-    by: "Дмитрий Смирнов, спринтер",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=DmitrySmirnov&backgroundColor=ef4444&textColor=ffffff",
+      "Были на Кавказе третий раз, но такого не видели никогда. Гид показал места, которые не найдёшь в интернете. Комфортный автомобиль, профессионал за рулём — рекомендую всем!",
+    by: "Ольга и Игорь Черновы, Казань",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=OlgaChernova&backgroundColor=ef4444&textColor=ffffff",
   },
   {
     tempId: 4,
     testimonial:
-      "Stride Collective научил меня, что бег — это не просто тренировка. Это терапия, дружба и приключение в одном флаконе. Этот клуб спас мое ментальное здоровье.",
-    by: "Елена Новикова, осознанный бегун",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=ElenaNovikova&backgroundColor=f59e0b&textColor=ffffff",
+      "Подъём к леднику — это что-то невероятное. Я фотограф, и виды там просто нереальные. Гид терпеливо ждал, пока я делал снимки, и подсказывал лучшие точки для съёмки.",
+    by: "Антон Миронов, фотограф",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AntonMironov&backgroundColor=f59e0b&textColor=ffffff",
   },
   {
     tempId: 5,
     testimonial:
-      "От дивана до 10К за 6 месяцев с поддержкой Stride Collective. Они принимают тебя таким, какой ты есть, и помогают понять, куда ты можешь дойти. Настоящая магия.",
-    by: "Алексей Морозов, история успеха",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AlexeyMorozov&backgroundColor=6366f1&textColor=ffffff",
+      "Групповой тур на 5 человек — познакомились с замечательными людьми. Атмосфера как в дружеской компании, а не в туристическом автобусе. Уже планируем вернуться следующим летом.",
+    by: "Светлана Кузнецова, Ростов-на-Дону",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=SvetlanaKuznetsova&backgroundColor=6366f1&textColor=ffffff",
   },
   {
     tempId: 6,
     testimonial:
-      "Рассветные пробежки со Stride Collective — это духовный опыт. Есть что-то мощное в том, чтобы двигаться вместе, пока мир просыпается вокруг нас.",
-    by: "Айгуль Рахимова, рассветный патруль",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AigulRahimova&backgroundColor=ec4899&textColor=ffffff",
+      "Боялась высоты, но гид успокоил и помог преодолеть страх. На перевале в 2800 метров стояла и не верила, что смогла сюда добраться. Это изменило меня.",
+    by: "Наташа Волкова, Воронеж",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=NatashaVolkova&backgroundColor=ec4899&textColor=ffffff",
   },
   {
     tempId: 7,
     testimonial:
-      "Я вступила в Stride Collective после переезда в новый город. Нашла не только беговое племя, но и настоящую семью. Движение здесь — это образ жизни.",
-    by: "Ольга Ким, строитель сообщества",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=OlgaKim&backgroundColor=06b6d4&textColor=ffffff",
+      "Приезжал на 3 дня — взяли два маршрута. Оба незабываемые. Гид — настоящий знаток истории и природы Кавказа, слушал его рассказы с открытым ртом всю дорогу.",
+    by: "Роман Беляев, Новосибирск",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=RomanBelyaev&backgroundColor=06b6d4&textColor=ffffff",
   },
   {
     tempId: 8,
     testimonial:
-      "Stride Collective празднует каждую победу, даже самую маленькую. Мой первый километр ощущался как олимпийское золото с этой командой, болеющей за меня.",
-    by: "Наталья Соколова, герой первого км",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=NataliyaSokolova&backgroundColor=f97316&textColor=ffffff",
+      "Организация на высшем уровне. Встретили вовремя, джип чистый и комфортный, воды и перекус взяли с собой. Всё предусмотрено — расслабляешься и просто наслаждаешься горами.",
+    by: "Татьяна Орлова, Самара",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=TatyanaOrlova&backgroundColor=f97316&textColor=ffffff",
   },
   {
     tempId: 9,
     testimonial:
-      "Тренировочные планы в Stride Collective невероятные. Я прошел путь от еле добегающего 5К до квалификации на Бостонский марафон всего за два года.",
-    by: "Михаил Волков, Бостонский квалификант",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=MikhailVolkov&backgroundColor=84cc16&textColor=ffffff",
+      "Ехали с корпоративом — 6 человек. Все остались в полном восторге. Гид сделал поездку незабываемой: интересные факты, красивые остановки, отличное настроение весь день.",
+    by: "Артём Фролов, корпоративный клиент",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=ArtemFrolov&backgroundColor=84cc16&textColor=ffffff",
   },
   {
     tempId: 10,
     testimonial:
-      "Что я люблю в Stride Collective — это разнообразие. Бегуны всех возрастов, с разным опытом и способностями объединяются одной страстью.",
-    by: "София Родригес, чемпион разнообразия",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=SofiaRodriguez&backgroundColor=a855f7&textColor=ffffff",
+      "Кавказ — это сила. Горы, запах трав, чистейший воздух и тишина. Спасибо гиду за то, что показал настоящий Кавказ, а не туристическую открытку.",
+    by: "Вера Климова, Пермь",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=VeraKlimova&backgroundColor=a855f7&textColor=ffffff",
   },
   {
     tempId: 11,
     testimonial:
-      "Дисциплина в Stride Collective не имеет равных. Когда знаешь, что твоя беговая семья ждет тебя — выходишь на пробежку несмотря ни на что.",
-    by: "Тимур Асланов, король постоянства",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=TimurAslanov&backgroundColor=059669&textColor=ffffff",
+      "Маршрут к нарзанным источникам — просто сказка. Вода с разным вкусом буквально из-под земли, вокруг горы. Такого в городе не купишь ни за какие деньги.",
+    by: "Павел Зайцев, Тюмень",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=PavelZaytsev&backgroundColor=059669&textColor=ffffff",
   },
   {
     tempId: 12,
     testimonial:
-      "Трейловая группа Stride Collective открыла мне самые красивые места, о которых я и не знал. Бег стал моим способом исследовать мир.",
-    by: "Нина Павлова, исследователь троп",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=NinaPavlova&backgroundColor=0ea5e9&textColor=ffffff",
+      "Взяли с мужем индивидуальный тур на годовщину свадьбы. Гид сделал поездку особенной — нашёл красивое место для пикника с видом на горы. Лучший подарок друг другу.",
+    by: "Юлия и Максим Сидоровы",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=YuliaSidorova&backgroundColor=0ea5e9&textColor=ffffff",
   },
   {
     tempId: 13,
     testimonial:
-      "Разговоры после пробежек в Stride Collective ценны не меньше самих пробежек. Мы решаем мировые проблемы километр за километром.",
-    by: "Роман Ким, философ бега",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=RomanKim&backgroundColor=dc2626&textColor=ffffff",
+      "Профессиональный подход, безопасность прежде всего. Ехали по узкому горному серпантину — гид вёл машину уверенно и спокойно. Ни капли страха, только восхищение.",
+    by: "Николай Громов, Краснодар",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=NikolayGromov&backgroundColor=dc2626&textColor=ffffff",
   },
   {
     tempId: 14,
     testimonial:
-      "Я никогда не думала, что стану бегуном, но дружелюбный к новичкам подход Stride Collective сделал это возможным. Теперь не представляю жизни без бега.",
-    by: "Екатерина Орлова, позднее цветение",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=EkaterinaOrlova&backgroundColor=7c3aed&textColor=ffffff",
+      "Первый раз в горах — боялась, что не потяну. Оказалось, всё комфортно и безопасно. Теперь мечтаю вернуться и попробовать более сложный маршрут!",
+    by: "Анна Захарова, Уфа",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AnnaZakharova&backgroundColor=7c3aed&textColor=ffffff",
   },
   {
     tempId: 15,
     testimonial:
-      "Поддержка при травмах в Stride Collective потрясающая. Когда я выбыл, они поддерживали мою мотивацию и помогли вернуться сильнее.",
-    by: "Даниил Пак, история возвращения",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=DaniilPak&backgroundColor=ea580c&textColor=ffffff",
+      "Гид рассказал столько интересного про историю горских народов, что я потом неделю читал книги об этом. Поездка стала не просто красивыми фото, но настоящим открытием.",
+    by: "Илья Борисов, Челябинск",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=IlyaBorisov&backgroundColor=ea580c&textColor=ffffff",
   },
   {
     tempId: 16,
     testimonial:
-      "Благотворительные забеги Stride Collective придают нашим километрам смысл. Мы бежим не только для себя — мы бежим, чтобы изменить мир к лучшему.",
-    by: "Раиса Грин, чемпион благотворительности",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=RaisaGrin&backgroundColor=16a34a&textColor=ffffff",
+      "Приехали с подругами — три человека, три разных желания. Гид умудрился угодить всем. Одна хотела виды, другая — историю, третья — экстрим. Получили всё и сразу.",
+    by: "Женя Лебедева, Волгоград",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=ZhenyaLebedeva&backgroundColor=16a34a&textColor=ffffff",
   },
   {
     tempId: 17,
     testimonial:
-      "Мастер-классы по технике в Stride Collective преобразили мою беговую форму. Я стал быстрее и забыл о травмах благодаря экспертному руководству.",
-    by: "Кирилл Вонг, перфекционист формы",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=KirillVong&backgroundColor=2563eb&textColor=ffffff",
+      "Фотографии с этой поездки набрали больше лайков в инстаграме, чем всё, что я публиковал раньше. Кавказ фотогеничен невероятно, а гид знает лучшие ракурсы.",
+    by: "Слава Медведев, блогер",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=SlavaMedvedev&backgroundColor=2563eb&textColor=ffffff",
   },
   {
     tempId: 18,
     testimonial:
-      "Виртуальные забеги Stride Collective во время локдауна спасли мой рассудок. Даже когда мы не могли бегать вместе, мы оставались связаны как сообщество.",
-    by: "Александра Фостер, виртуальный воин",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=AlexandraFoster&backgroundColor=be185d&textColor=ffffff",
+      "Ездили с пожилыми родителями — беспокоились. Оказалось, зря: гид всё учёл, темп был комфортным, остановки частыми. Папа сказал, что это лучшее путешествие за последние 20 лет.",
+    by: "Константин Рябов, Липецк",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=KonstantinRyabov&backgroundColor=be185d&textColor=ffffff",
   },
   {
     tempId: 19,
     testimonial:
-      "Наставничество в Stride Collective меняет жизни. Опытные бегуны берут новичков под крыло и щедро делятся своей мудростью.",
-    by: "Карлос Мендес, благодарный ученик",
-    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=CarlosMendez&backgroundColor=0891b2&textColor=ffffff",
+      "Настоящее приключение без лишних рисков. Гид знает горы как свои пять пальцев и заботится о каждом госте. Уеду отсюда другим человеком — в лучшем смысле.",
+    by: "Сasha Щербакова, Омск",
+    imgSrc: "https://api.dicebear.com/7.x/initials/svg?seed=SashaShcherbakova&backgroundColor=0891b2&textColor=ffffff",
   },
 ]
 
